@@ -99,7 +99,27 @@ body {
   padding: 10px 20px;
   box-sizing: border-box;
   z-index: 1000; /* Ensure the navbar stays on top */
+  display: flex;
+  justify-content: space-between; /* Align items to the left and right */
+  align-items: center;
 }
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo i {
+  color: #fff; /* Color of the icon */
+  font-size: 24px; /* Size of the icon */
+  margin-right: 5px; /* Space between the icon and text */
+}
+
+.logo span {
+  color: #fff; /* Color of the text */
+  font-size: 20px; /* Size of the text */
+}
+
 
 .navbar a {
   color: white;
@@ -466,31 +486,31 @@ body {
 
 @keyframes moveBall1 {
   0% {
-    transform: translate(36vw, 25vh) scale(0.9);
+    transform: translate(33vw, 25vh) scale(0.9);
   }
   
   100% {
-    transform: translate(-36vw, -25vh) scale(1); /* Final position and original size */
+    transform: translate(-33vw, -25vh) scale(1); /* Final position and original size */
   }
 }
 
 @keyframes moveBall2 {
   0% {
-    transform: translate(0, -40vh) scale(.8);
+    transform: translate(0, -37vh) scale(.8);
   }
  
   100% {
-    transform: translate(0, 40vh) scale(0.9); /* Final position and original size */
+    transform: translate(0, 37vh) scale(0.9); /* Final position and original size */
   }
 }
 
 @keyframes moveBall3 {
   0% {
-    transform: translate(-36vw, 25vh) scale(1.2); /* Initial position and size */
+    transform: translate(-33vw, 25vh) scale(1.2); /* Initial position and size */
   }
  
   100% {
-    transform: translate(36vw, -25vh) scale(1.3); /* Final position and original size */
+    transform: translate(33vw, -25vh) scale(1.3); /* Final position and original size */
   }
 }
 
@@ -532,7 +552,7 @@ body {
   padding: 10px;
 }
 
-#about-left span ,.contact-page span{
+#about-left span ,.contact-page span , #project span{
   color: yellow;
 }
 #about-left h3 {
@@ -703,16 +723,131 @@ body {
 
 
 
+/* -------------------------------------projects----------------- */
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.card {
+  background-color: rgb(0, 0, 0,.1);
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+  height: 100%;
+  text-align: start;
+}
+.card::after{
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, 0.135),
+    transparent
+  ); 
+  top: 0;
+  left: -100%;
+  animation: slideMask 4s linear infinite !important;  
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card h3 {
+  margin-top: 0;
+  font-size: 20px;
+  color: #929292;
+}
+
+.card p {
+  font-size: 16px;
+  color: #666;
+  margin: 10px 0;
+}
+
+.card a {
+  padding: 12px 24px; /* Add padding */
+  font-size: 14px; /* Set font size */
+  color: #fff; /* Text color */
+  background-color: rgba(255, 255, 255, 0.09);
+
+  border: none; /* Remove border */
+  border-radius: 5px; /* Add border radius */
+  cursor: pointer; /* Change cursor on hover */
+  transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Add transitions for smoother effects */
+  margin: 10px ; /* Add margin between buttons */
+  position: relative; /* Required for animation */
+  border: 1px solid rgba(255, 255, 255, 0); 
+  text-decoration: none;
+  
+}
+
+
+.card a:hover {
+  border: 1px solid rgba(255, 255, 255, 0); 
+  
+  background-color:rgba(176, 176, 176, 0.169); /* Darken background color on hover */
+  transform: scale(1.05); /* Scale up the button slightly on hover */
+  box-shadow: 0 8px 16px rgba(255, 85, 0, 0.1); /* Add shadow on hover for depth */
+}
+
+/* Animation for button hover effect */
+.card a::before {
+  content: ''; /* Required for pseudo-element */
+  position: absolute; /* Position relative to the button */
+  top: 0; /* Align to top */
+  left: 50%; /* Center horizontally */
+  width: 0; /* Initial width */
+  height: 100%; /* Full height */
+  transition: width 0.3s, left 0.3s; /* Add transition for smoother effect */
+  z-index: -1; /* Behind the button */
+  background-color: rgba(234, 255, 98, 0.09);
+  
+
+}
+
+.card a:hover::before {
+  width: 100%; /* Expand width on hover */
+  left: 0; /* Move to left edge */
+}
+
+
 
 /* ---------------------------------contract */
 
 
 
 
+.contact-page{
+  color: white;
+  padding: 30px;
+  background-color: rgba(23, 23, 23, 0.6);
+}
 .contact-page .container {
   max-width: 90%;
   margin: auto;
-  background-color: rgba(0, 0, 0, 0.1); /* Set transparent background */
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6); /* Set transparent background */
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0);
@@ -729,7 +864,7 @@ body {
   background-color: rgba(0, 0, 0, 0.1);
   border: 1px solid rgb(0, 0, 0,0.1);
   outline: none;
-  color: white;
+  color: white !important;
 }
 
 .contact-page input[type="submit"] {
@@ -748,17 +883,52 @@ body {
 
 /* Media query for tablets */
 @media only screen and (max-width: 768px) {
-  .navbar a:not(:last-child) {
+ 
+
+  .card {
+    padding: 10px;
+  }
+
+  .card-content {
+    padding: 15px;
+  }
+
+  .card h3 {
+    font-size: 18px;
+  }
+
+  .card p {
+    font-size: 14px;
+  }
+
+  .card a {
+    padding: 8px 15px;
+  }
+.navbar a:not(.icon) {
     display: none;
   }
+  
   .navbar a.icon {
     float: right;
     display: block;
+    text-align: start !important;
   }
+
   .navbar.responsive a {
     display: block;
     text-align: center;
+    width: 100%;
+    transition: display 1s ease; /* Adjusted transition property */
   }
+
+  .navbar.responsive {
+    flex-direction: column; /* Ensure items stack vertically */
+    align-items: flex-start; /* Align items to the start */
+    transition: flex-direction 1s ease; /* Adjusted transition property */
+  }
+
+}
+
 
 
 
@@ -803,10 +973,21 @@ body {
         width: 86vw;
         left: 3%;
     }
-  }
+  
   
   /* Media query for mobile devices */
   @media only screen and (max-width: 640px) {
+    #project{
+      padding: 10px !important;
+    }
+    .container {
+      padding: 0px;
+      gap: 5px;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 2fr)) !important;
+    }
+    .card{
+      height: 95%;
+    }
     #home h4 {
         font-size: 18px; /* Further decrease font size for smaller screens */
       }
