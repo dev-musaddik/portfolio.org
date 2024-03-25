@@ -486,11 +486,11 @@ body {
 
 @keyframes moveBall1 {
   0% {
-    transform: translate(33vw, 25vh) scale(0.9);
+    transform: translate(27vw, 25vh) scale(0.9);
   }
   
   100% {
-    transform: translate(-33vw, -25vh) scale(1); /* Final position and original size */
+    transform: translate(-27vw, -25vh) scale(1); /* Final position and original size */
   }
 }
 
@@ -506,11 +506,11 @@ body {
 
 @keyframes moveBall3 {
   0% {
-    transform: translate(-33vw, 25vh) scale(1.2); /* Initial position and size */
+    transform: translate(-27vw, 25vh) scale(1.2); /* Initial position and size */
   }
  
   100% {
-    transform: translate(33vw, -25vh) scale(1.3); /* Final position and original size */
+    transform: translate(27vw, -25vh) scale(1.3); /* Final position and original size */
   }
 }
 
