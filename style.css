@@ -1,0 +1,865 @@
+/* Basic styles */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  height: 100%;
+  overflow-x: hidden; /* Disable horizontal scrolling */
+}
+/* Styling for the About section */
+
+
+
+body {
+  /* background-image: url("https://via.placeholder.com/1920x1080"); Set background image */
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0,1);
+  overflow-x: hidden !important;
+}
+:root{
+  --text-color:orange;
+
+}
+.loading-text {
+  font-size: 1.5rem;
+  color: #666;
+}
+
+
+.loader-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loader {
+  width: 50px;
+  height: 50px;
+  position: relative;
+}
+
+.loader div {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #7700ff;
+  border-radius: 50%;
+  animation: loader-animation 1.2s linear infinite;
+}
+
+.loader div:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+
+.loader div:nth-child(2) {
+  top: 0;
+  right: 0;
+}
+
+.loader div:nth-child(3) {
+  bottom: 0;
+  left: 0;
+}
+
+.loader div:nth-child(4) {
+  bottom: 0;
+  right: 0;
+}
+
+@keyframes loader-animation {
+  0% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1.2);
+  }
+}
+
+
+/* ------------------------navbar */
+.navbar {
+  background-color: rgba(0, 0, 0, 0.5); /* Transparent background color with some opacity */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  z-index: 1000; /* Ensure the navbar stays on top */
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: background-color 0.3s ease;
+}
+
+/* Icon styles */
+.icon {
+  display: none;
+}
+
+
+/* Transparent background */
+.page {
+  /* Ensure each section covers the entire viewport height */
+  min-height: 100vh;
+  max-width: 90vw;
+  padding: 50px;
+  margin: auto;
+  background-color: rgba(212, 212, 212, 0.07);
+  box-sizing: border-box;
+  position: relative;
+  color: white;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+
+  /* Add some transition to make the scrolling smoother and visually appealing */
+  transition: transform 0.5s ease-in-out;
+}
+.page::before {
+  /* Create a pseudo-element to fill the bottom part of each section */
+  content: "";
+  background: linear-gradient(to bottom, transparent, rgba(0, 0, 0, 1));
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: calc(
+    50px - 2 * 1px
+  ); /* subtracting border-width to include the "border" in the height */
+  border-top: 1px solid rgba(0, 0, 0, 1);
+}
+#home h4 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 24px; /* Adjust font size */
+    color: #8f8f8f; /* Text color */
+    margin-bottom: 20px; /* Add some bottom margin */
+    text-align: start; /* Center align the text */
+    margin-bottom: 0;
+  }
+  #home p {
+    font-family: 'Times New Roman', Times, serif;
+    
+    font-size: 18px; /* Adjust font size */
+    color: var(--text-color); /* Text color */
+    text-align: start; /* Center align the text */
+    max-width: 80%; /* Limit the maximum width of the paragraph */
+    margin:10px 0; /* Center the paragraph and add bottom margin */
+  }
+ /* Style for contact info section */
+#home .con-info {
+    position: fixed;
+    width: 88vw;
+    top:80%;
+    left: 3%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+/* Style for the left side of contact info */
+#home .left-site {
+    display: flex;
+    flex-direction: column;
+   height: 40vh;
+   justify-content: space-evenly;
+}
+
+
+/* Style for social media icons */
+
+#home .left-site a {
+    color: #fff;
+    font-size: 24px;
+    margin-right: 10px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+/* Change color on hover */
+#home .left-site a:hover {
+    color: #3de8ff;
+}
+
+/* Style for the right side of contact info */
+#home .right-site{
+    transform: rotate(90deg);
+    padding: 0;
+    margin: 0;
+
+}
+#home .right-site p {
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+}
+
+
+
+  
+#home{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  padding-top: 20vh;
+}
+
+.text-animation {
+  font-family: "Arial", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  position: relative;
+  overflow: hidden;
+}
+
+.prefix {
+  opacity: 0.5; /* Adjust the opacity as needed */
+  color: rgb(37, 240, 255);
+  position: relative;
+  display: inline-block;
+
+
+}
+.prefix::after{
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+    #fff,
+    transparent
+  ); 
+  top: 0;
+  left: -100%;
+  animation: slideMask 4s linear infinite !important;  
+
+}
+.animated-text {
+  position: relative;
+  display: inline-block;
+  animation: changeText 4s linear infinite;
+}
+
+.text-animation::before {
+  content: "";
+  position: absolute;
+  width: 550%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    transparent,
+     rgb(0,0,0,.1),
+    transparent
+  ); /* Create gradient mask */
+  top: 0;
+  left: -100%;
+  /* Animate gradient mask */
+
+}
+.slide-animation{
+    background: rgba(255, 255, 255, 0.01);
+  
+}
+
+@keyframes changeText {
+  0%,
+  25% {
+    opacity: 1;
+  }
+  50%,
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideMask {
+    0% {
+      left: -550%;
+    }
+    100% {
+      left: 550%;
+    }
+  }
+  
+
+.header {
+  font-family: "Arial", sans-serif;
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  color:var(--text-color); /* Text color */
+  text-shadow: 2px 2px 4px rgba(13, 0, 255, 0.5);
+  cursor: pointer;
+}
+
+.angle {
+  color: #ff59bf; /* Color of the angle brackets */
+  display: inline-block; /* Ensures each angle occupies its own space */
+}
+#leftAngle , #rightAngle{
+    transition: transform 0.3s ease;
+    -webkit-transition: -webkit-transform 0.3s ease;
+    -moz-transition: -moz-transform 0.3s ease;
+    -ms-transition: -ms-transform 0.3s ease;
+    -o-transition: -o-transform 0.3s ease;
+}
+
+.header:hover #leftAngle {
+    transform: translateX(-15px);
+
+  }
+  
+  .header:hover #rightAngle {
+    transform: translateX(15px);
+
+  }
+  
+
+.button-section {
+    text-align: center; /* Center align buttons */
+    margin-top: 50px;
+  }
+  
+  .cta-button {
+    padding: 12px 24px; /* Add padding */
+    font-size: 18px; /* Set font size */
+    font-weight: bold; /* Set font weight */
+    color: #fff; /* Text color */
+    background-color: rgba(255, 255, 255, 0.09);
+
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Change cursor on hover */
+    transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s; /* Add transitions for smoother effects */
+    margin: 10px ; /* Add margin between buttons */
+    position: relative; /* Required for animation */
+    border: 1px solid rgba(255, 255, 255, 0); 
+    
+    
+
+  }
+  .cta-button:first-child{
+    margin-left: 0;
+    background-color:var(--text-color); /* Background color */
+    border: 1px solid var(--text-color); 
+
+  }
+  .cta-button:first-child:hover{
+    border: 1px solid white;
+    
+
+  }
+  .cta-button:hover {
+    border: 1px solid rgba(255, 255, 255, 0); 
+    
+    background-color:rgba(176, 176, 176, 0.169); /* Darken background color on hover */
+    transform: scale(1.05); /* Scale up the button slightly on hover */
+    box-shadow: 0 8px 16px rgba(255, 85, 0, 0.1); /* Add shadow on hover for depth */
+  }
+  
+  /* Animation for button hover effect */
+  .cta-button::before {
+    content: ''; /* Required for pseudo-element */
+    position: absolute; /* Position relative to the button */
+    top: 0; /* Align to top */
+    left: 50%; /* Center horizontally */
+    width: 0; /* Initial width */
+    height: 100%; /* Full height */
+    transition: width 0.3s, left 0.3s; /* Add transition for smoother effect */
+    z-index: -1; /* Behind the button */
+    background-color: rgba(234, 255, 98, 0.09);
+
+  }
+  
+  .cta-button:hover::before {
+    width: 100%; /* Expand width on hover */
+    left: 0; /* Move to left edge */
+  }
+  
+  
+/* Styling for individual balls */
+.ball {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%; /* Make the ball round */
+  position: absolute;
+  top: 40%;
+  left: 40%;
+  box-shadow: 3px 3px 30px rgb(255, 181, 22); /* Add shadow for depth */
+  border: 10px solid transparent; /* Initial border */
+  z-index: -1;
+  filter: blur(10px);
+}
+
+.ball:nth-child(4),.ball:nth-child(1) {
+  /* display: none; */
+
+  background: linear-gradient(
+    45deg,
+    rgba(255, 157, 0, 0.8),
+    rgba(255, 0, 255, 0.8)
+  ); /* Red to Magenta gradient */
+  animation: moveBall1 15s infinite alternate, animateBorder 2s linear infinite,
+    changeColor 10s infinite alternate; /* Apply animations to the first ball */
+  transform: translate(100px, -110px) scale(1); /* Initial position for ball 1 */
+}
+
+.ball:nth-child(2) {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 255, 0, 0.8),
+    rgba(0, 78, 95, 0.8)
+  ); /* Green to Yellow gradient */
+  animation: moveBall2 15s infinite alternate, animateBorder 2s linear infinite,
+    changeColor 10s infinite alternate; /* Apply animations to the second ball */
+  transform: translate(200px, 100px) scale(1.2); /* Initial position for ball 2 */
+}
+
+.ball:nth-child(3) {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 255, 0.8),
+    rgba(255, 255, 255, 0.8)
+  ); /* Blue to White gradient */
+  animation: moveBall3 15s infinite alternate, animateBorder 2s linear infinite,
+    changeColor 10s infinite alternate; /* Apply animations to the third ball */
+  transform: translate(300px, 0) scale(1); /* Initial position for ball 3 */
+}
+
+/* Animation keyframes for balls */
+/* Animation keyframes for balls */
+
+@keyframes moveBall1 {
+  0% {
+    transform: translate(36vw, 25vh) scale(0.9);
+  }
+  
+  100% {
+    transform: translate(-36vw, -25vh) scale(1); /* Final position and original size */
+  }
+}
+
+@keyframes moveBall2 {
+  0% {
+    transform: translate(0, -40vh) scale(.8);
+  }
+ 
+  100% {
+    transform: translate(0, 40vh) scale(0.9); /* Final position and original size */
+  }
+}
+
+@keyframes moveBall3 {
+  0% {
+    transform: translate(-36vw, 25vh) scale(1.2); /* Initial position and size */
+  }
+ 
+  100% {
+    transform: translate(36vw, -25vh) scale(1.3); /* Final position and original size */
+  }
+}
+
+
+/* Text loading animation */
+.loading-text {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+/* Animation keyframes for text loading */
+.loading-text.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* -------------------------------------about---------------------------- */
+
+
+
+#about {
+  padding: 50px;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  width: 100%;
+}
+#about-left {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+#about .right-side{
+  flex: 2;
+  padding: 10px;
+}
+
+#about-left span ,.contact-page span{
+  color: yellow;
+}
+#about-left h3 {
+  font-size: 1rem !important;
+  color: hsl(190, 100%, 64%) !important;
+  margin: 0 !important;
+  text-align: start !important;
+}
+
+#about-left .img-section {
+  margin-top: 20px;
+}
+
+#about-left img {
+  max-width: 100%;
+  height: auto;
+}
+
+#about-left button {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#about-left button:hover {
+  background-color: #2980b9;
+}
+
+#about .img-section img{
+  padding: 5px;
+  border: 2px solid rgba(255, 145, 0, 0.453);
+
+  
+}
+#about .img-section{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+#about h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#about p {
+  font-size: .9rem;
+  text-align: start;
+  line-height: 31px !important;
+  line-height: 1.6;
+  color: #666;
+}
+
+#about h3 {
+  font-size:1rem;
+  color: #b300ff;
+  margin-top: 40px;
+  text-align: start;
+}
+#about h4 {
+  text-align: start;
+}
+
+#about ul {
+  margin-top: 20px;
+}
+
+#about li {
+  margin-bottom: 10px;
+}
+
+/* Styling for the Experience section */
+#experience {
+  padding: 50px;
+}
+
+#experience h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#experience h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-top: 40px;
+}
+
+#experience p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #666;
+}
+
+.category {
+  margin-bottom: 20px;
+}
+.category h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.list-item {
+  margin: 5px;
+  padding: 10px;
+  background-color: #000000;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+@keyframes slideMask1 {
+  0% {
+    left: -100%; /* Adjusted the starting position */
+  }
+  100% {
+    left: 100%; /* Adjusted the ending position */
+  }
+}
+.list-item::before{
+  content: "";
+  position: absolute;
+  top: 0; left: 0; 
+  width: 100%;
+  height: 100%;
+ 
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(255, 255, 255, .2),
+    transparent
+  ); 
+  top: 0;
+  left: -100%;
+  animation: slideMask1 4s linear infinite !important;  
+}
+.list-item i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+/* Styling for the Contact section */
+#contact {
+  /* padding: 50px; */
+  text-align: center;
+  flex-direction: column;
+}
+
+#contact h1 {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+
+
+
+/* ---------------------------------contract */
+
+
+
+
+.contact-page .container {
+  max-width: 90%;
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.1); /* Set transparent background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0);
+}
+
+.contact-page input[type="text"],
+.contact-page textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgb(0, 0, 0,0.1);
+  outline: none;
+  color: white;
+}
+
+.contact-page input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.contact-page input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Media query for tablets */
+@media only screen and (max-width: 768px) {
+  .navbar a:not(:last-child) {
+    display: none;
+  }
+  .navbar a.icon {
+    float: right;
+    display: block;
+  }
+  .navbar.responsive a {
+    display: block;
+    text-align: center;
+  }
+
+
+
+  #about {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px !important;
+   }
+   
+   #about-left .top{
+     transform: translateX(-20%);
+
+   }
+    #home h4 {
+        font-size: 20px; /* Decrease font size for smaller screens */
+      }
+      #home p {
+        font-size: 16px; /* Decrease font size for smaller screens */
+      }
+    .page {
+      padding: 30px; /* Adjust padding for smaller screens */
+    }
+  
+    .text-animation {
+      font-size: 24px; /* Decrease font size for smaller screens */
+    }
+  
+    .header {
+      font-size: 28px; /* Decrease font size for smaller screens */
+    }
+  
+    .button-section {
+      margin-top: 30px; /* Adjust margin for smaller screens */
+    }
+  
+    .cta-button {
+      font-size: 16px; /* Decrease font size for smaller screens */
+      padding: 10px 20px; /* Adjust padding for smaller screens */
+    }
+    #home .con-info {
+        width: 86vw;
+        left: 3%;
+    }
+  }
+  
+  /* Media query for mobile devices */
+  @media only screen and (max-width: 640px) {
+    #home h4 {
+        font-size: 18px; /* Further decrease font size for smaller screens */
+      }
+      #home p {
+        font-size: 14px; /* Further decrease font size for smaller screens */
+      }
+    .page {
+      padding: 20px; /* Further reduce padding for smaller screens */
+    }
+  
+    .text-animation {
+      font-size: 20px; /* Decrease font size for smaller screens */
+    }
+  
+    .header {
+      font-size: 24px; /* Decrease font size for smaller screens */
+    }
+  
+    .button-section {
+      margin-top: 20px; /* Further adjust margin for smaller screens */
+    }
+  
+    .cta-button {
+      font-size: 14px; /* Decrease font size for smaller screens */
+      padding: 8px 16px; /* Further adjust padding for smaller screens */
+    }
+    #home .con-info {
+        margin-top: 100px;
+        position: relative;
+        width: 35vh;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        z-index: 1000; 
+        height: 10vh;
+
+    }
+    #home .left-site{
+        flex-direction: row;
+        padding: 10px;
+        width: 100%;
+        margin-top: 30px;
+        justify-content: space-evenly;
+        background-color: rgba(0, 8, 255, 0.087);
+    }
+ 
+    #home .right-site{
+        transform: rotate(0deg) !important;
+        padding: 10px;
+        background-color: rgba(0, 8, 255, 0.087);
+    }
+    
+    
+
+  }
+  

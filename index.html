@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animated Background Page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+
+  <body>
+    <div class="loader-wrapper">
+      <div class="ball" style="background-color: rgba(255, 0, 0, 0.5)"></div>
+      <div class="ball" style="background-color: rgba(0, 255, 0, 0.5)"></div>
+      <div class="ball" style="background-color: rgba(0, 0, 255, 0.5)"></div>
+      <div class="loader">
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+        <div class=""></div>
+      </div>
+    </div>
+    <div class="ball" style="background-color: rgba(255, 0, 0, 0.5)"></div>
+    <div class="ball" style="background-color: rgba(0, 255, 0, 0.5)"></div>
+    <div class="ball" style="background-color: rgba(0, 0, 255, 0.5)"></div>
+    <div class="navbar" id="myNavbar">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="javascript:void(0);" class="icon" onclick="toggleMenu()" style="display: none;">
+        <i class="fa fa-times"></i>
+
+      </a>
+      <a href="javascript:void(0);" class="icon close" onclick="toggleMenu()">
+        <i class="fa fa-bars"></i>
+
+      </a>
+    </div>
+
+    <div class="page" id="home">
+      <h4>Hi, my name is</h4>
+      <h1 class="header">
+        <span class="angle" id="leftAngle">&lt;</span>
+        Musaddik Hossain
+        <span class="angle" id="rightAngle">/&gt;</span>
+      </h1>
+
+      <div class="text-animation" id="textAnimation">
+        <span class="prefix">I'm a </span>
+        <span class="animated-text"></span>
+      </div>
+
+      <p>
+        I Design & Develop Accessible, Elegant Apps using modern tech stacks.
+      </p>
+      <div class="button-section">
+        <button class="cta-button">Get in touch</button>
+        <button class="cta-button">See my work</button>
+      </div>
+      <div class="con-info">
+        <div class="left-site">
+          <a href="https://github.com/your_username" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/your_username" target="_blank">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://facebook.com/your_username" target="_blank">
+            <i class="fab fa-facebook"></i>
+          </a>
+          <a href="https://wa.me/your_phone_number" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </div>
+        <div class="right-site">
+          <p>musaddikh13@gmail.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="page" id="about">
+      <div class="left-side" id="about-left">
+        <div class="top">
+          <h3><span>01. </span>About Me</h3>
+        </div>
+        <div class="img-section">
+          <img src="/img/lll.png" alt="img" />
+        </div>
+        <button>Resume</button>
+      </div>
+      <div class="right-side">
+        <h4>Musaddik Hossain:</h4>
+
+        <p>
+          👋 Greetings! I'm Musaddik, a passionate and driven individual hailing from the serene town of Rajbari in beautiful Bangladesh. As a devoted individual, I draw inspiration from various sources to guide my journey in the world of technology, aiming to inspire others along the way <br>
+          <br>
+          📚 Education has been a cornerstone of my life, and I am currently pursuing my studies in Computer Science and Technology at the esteemed Faridpur Polytechnic Institute. Since my early days in class 9, I embarked on a remarkable journey in the world of programming that has led me to where I am today. <br>
+          <br>
+          💻 My love for technology has manifested in various roles and skills. I am not just a student; I am a developer and a programmer. My proficiency extends to the realm of C programming, where I have honed my skills to craft efficient and innovative solutions. Moreover, I am proficient in backend development, adding another layer to my skill set. <br>
+          <br>
+          🌐 But my skills don't stop there. I'm well-versed in the languages that power the web - HTML, CSS, and JavaScript. The art of creating captivating user interfaces became a fascination for me, and I've honed my craft as a UI designer. Additionally, I've embraced modern frameworks like Bootstrap and the dynamic React framework, empowering me to bring engaging and responsive web experiences to life. <br>
+          <br>
+          🚀 Beyond the boundaries of academics and programming, I thrive on challenges and growth. Each line of code written is a testament to my commitment to excellence. The projects I've undertaken are a reflection of my dedication to both function and aesthetics. <br>
+          <br>
+          🌍 As an aspiring technologist, I aim not just to achieve personal success, but to contribute positively to my community and beyond. My faith, education, and skills are the foundation upon which I intend to build a future that bridges the gap between innovation and social responsibility. <br>
+          <br>
+          📌 Let's connect and collaborate to create a world where technology enriches lives and transcends boundaries. Whether it's code or creativity, I'm ready to make a difference.
+        </p>
+        
+        <div class="technology-section">
+          <h3 style="color: aqua;">Technologies I'm Using Now</h3>
+          <div class="category">
+            <h3>Languages:</h3>
+            <ul class="list">
+              <li class="list-item"><i class="fab fa-cplusplus"></i> C++</li>
+              <li class="list-item"><i class="fab fa-js"></i> JavaScript</li>
+              <li class="list-item"><i class="fab fa-js"></i> TypeScript</li>
+            </ul>
+          </div>
+          <div class="category">
+            <h3>Frontend and Frameworks:</h3>
+            <ul class="list">
+              <li class="list-item"><i class="fab fa-html5"></i> HTML</li>
+              <li class="list-item"><i class="fab fa-css3-alt"></i> CSS</li>
+              <li class="list-item"><i class="fab fa-react"></i> ReactJS</li>
+              <li class="list-item"><i class="fab fa-nextjs"></i> NextJS</li>
+              <li class="list-item">
+                <i class="fab fa-tailwind"></i> Tailwind CSS
+              </li>
+              <li class="list-item">
+                <i class="fab fa-bootstrap"></i> Bootstrap
+              </li>
+              <li class="list-item">
+                <i class="fab fa-react"></i> React Native
+              </li>
+            </ul>
+          </div>
+          <div class="category">
+            <h3>Backend:</h3>
+            <ul class="list">
+              <li class="list-item">
+                <i class="fab fa-firebase"></i> Firebase
+              </li>
+              <li class="list-item"><i class="fab fa-node"></i> Node.js</li>
+              <li class="list-item"><i class="fab fa-mdb"></i> MongoDB</li>
+              <li class="list-item">
+                <i class="fab fa-express"></i> Express.js
+              </li>
+            </ul>
+          </div>
+          <div class="category">
+            <h3>Design Tools:</h3>
+            <ul class="list">
+              <li class="list-item"><i class="fab fa-figma"></i> Figma</li>
+              <li class="list-item">
+                <i class="fab fa-react"></i> React Native
+              </li>
+              <li class="list-item"><i class="fab fa-react"></i> NextJS</li>
+              <li class="list-item"><i class="fab fa-sass"></i> SaaS</li>
+              <li class="list-item"><i class="fab fa-node"></i> Node Js</li>
+              <li class="list-item"><i class="fab fa-mdb"></i> MongoDB</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+   
+
+    <div class="page contact-page" id="contact">
+      <div class="top">
+        <h3><span>02. </span>Contract Me</h3>
+      </div>
+      <div class="context-text">
+        <h3>Get in touch with me</h3>
+        <p>Want to talk about your project ?
+          Just fill out the form below and I’ll get back to you as soon as I can.</p>
+      </div>
+      <div class="container">
+        <form action="#">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="Your name.." required>
+    
+          <label for="email">Email:</label>
+          <input type="text" id="email" name="email" placeholder="Your email.." required>
+    
+          <label for="message">Message:</label>
+          <textarea id="message" name="message" placeholder="Write something.." style="height:150px" required></textarea>
+    
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+    
+    <footer style="display: flex; justify-content: center; color: rgb(255, 255, 255,.5); height: 100px; ">
+      <p>&copy; 2024 Musaddik Hossain. All rights reserved.</p>
+    </footer>
+
+    <script src="/index.js"></script>
+  </body>
+</html>
